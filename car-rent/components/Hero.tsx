@@ -1,8 +1,14 @@
 "use client";
 
+<<<<<<< HEAD
 import React from 'react'
 import CustomButton from './CustomButton'
 import Image from 'next/image'
+=======
+import React from 'react';
+import CustomButton from './CustomButton';
+import Image from 'next/image';
+>>>>>>> 8fdc145 (Last change)
 
 const Hero = () => {
   const handleScroll= () => {
@@ -20,11 +26,30 @@ const Hero = () => {
         </p>
         <CustomButton
           title="Explore Cars"
+<<<<<<< HEAD
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
           handleClick = {handleScroll}
         
         />
 
+=======
+          btnType='button'
+          containerStyles="bg-primary-blue text-white rounded-full mt-10"
+          handleClick = {handleScroll}    
+        />
+      </div>
+
+      <div className='hero__image-container'>
+        <div className='hero__image '>
+          <Image
+            src="/hero.png"
+            alt="hero-bg"
+            fill
+            className='object-contain'
+          />
+        </div>
+        <div className='hero__image-overlay'/>
+>>>>>>> 8fdc145 (Last change)
       </div>
 
     </div>
