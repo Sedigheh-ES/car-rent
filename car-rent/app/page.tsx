@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <Hero/>
-    <h1>Hello Next</h1>
+   
     </main>
     
   );
