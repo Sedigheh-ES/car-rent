@@ -31,12 +31,16 @@ const SearchManufacture = ({ manufacture, setManufacture }: SearchManufacturePro
                             className='ml-4'
                         />
                     </Combobox.Button>
+
+                    {/* Input field for searching */}
                     <Combobox.Input
                         className='search-manufacturer__input'
                         placeholder="Volkswagan"
                         displayValue={(manufacture) => manufacture}
                         onChange={(e) => setQeury(e.target.value)}
                     />
+
+                       {/* Transition for displaying the options */}
                     <Transition
                         as={Fragment}
                         leave="transition ease-in duration-100"
@@ -44,8 +48,9 @@ const SearchManufacture = ({ manufacture, setManufacture }: SearchManufacturePro
                         leaveTo="opacity-0"
                         afterLeave={() => setQeury('')}
                     >
+
                         <Combobox.Options>
-                            {filteredManufacturer.length === 0 && query !== "" &&
+                            {filteredManufacturer.length === 0 && query !== "" ?
                                 (
                                     <Combobox.Option
                                         value={query}
