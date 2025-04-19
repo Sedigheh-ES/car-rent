@@ -4,7 +4,10 @@ export interface CustomButtonProps{
     title: string;
     containerStyles?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>;
-    btnType: "button" | "submit"
+    btnType: "button" | "submit";
+    textStyles?: string;
+    rightIcon?: string;
+    isDisable?:boolean
 };
 
 export interface SearchManufactureProps{
@@ -13,7 +16,7 @@ export interface SearchManufactureProps{
 }
 
 export interface CarProps{
-    city_mpg:string;
+    city_mpg:number;
 class:string;
 combination_mpg:string;
 cylinders:number;
