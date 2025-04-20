@@ -17,7 +17,7 @@ const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
     
 const SearchBar = () => {
     const [manufacture, setManufacture] = useState('');
-    const [model, setModel] = useState();
+    const [model, setModel] = useState('');
     const router = useRouter();
     
     const handleSearch = (e:React.FormEvent<HTMLFormElement>) => {      
@@ -44,7 +44,7 @@ const SearchBar = () => {
          }
         
         const newPathname = `${window.location.pathname}?${searchParams.toString()} `;
-       router.push(newPathname);
+         router.push(newPathname);
     }
 
  

@@ -19,10 +19,10 @@ const SearchManufacture = ({ manufacture, setManufacture }: SearchManufacturePro
 
     return (
 
-        <div className='sesarch-manufacturer'>
+        <div className='search-manufacturer'>
             <Combobox value={manufacture}  onChange={setManufacture}>
                 <div className='relative w-full'>
-                    <Combobox.Button className={'absolute top-[14px]'} >
+                    <Combobox.Button className='absolute top-[14px]'>
                         <Image
                             src="/car-logo.svg"
                             width={20}
