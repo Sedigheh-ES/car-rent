@@ -10,6 +10,9 @@ export interface CustomButtonProps {
     isDisable?: boolean
 };
 
+
+
+
 export interface SearchManufactureProps {
     manufacture: string;
     setManufacture: (manufacture: string) => void
@@ -31,9 +34,23 @@ export interface CarProps {
 }
 
 export interface FilterProps{
-    manufacturers:string,
+    manufacturer:string,
     year:number,
     fuel:string,
     limit:number,
     model:string
+}
+export interface OptionProps{
+    title: string,
+    value: string
+        
+}
+export interface CustomFilterProps{
+    title: string,
+    options:OptionProps[]
+}
+
+export interface ShowMoreProps{
+    pageNumber: number,
+    isNext:boolean
 }
