@@ -36,7 +36,7 @@ const CustomFilter = ({title,options}:CustomFilterProps) => {
           leaveTo="opacity-0"
         
         >
-          {/* <Listbox.Options
+          <Listbox.Options
            className="custom-filter__options"
           >
             {options.map((option) => (
@@ -52,7 +52,7 @@ const CustomFilter = ({title,options}:CustomFilterProps) => {
               </Listbox.Option>
             ))}
             
-           </Listbox.Options> */}
+           </Listbox.Options>
         </Transition>
      </Listbox>
     </div>
