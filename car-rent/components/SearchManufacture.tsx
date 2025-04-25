@@ -5,7 +5,7 @@ import React, { Fragment, useState } from 'react';
 import { manufacturers } from '@/constants';
 import Image from 'next/image';
 
-const SearchManufacture = ({ manufacture, setManufacture }: SearchManufactureProps) => {
+const SearchManufacture = ({selected, setSelected }:SearchManufactureProps)=> {
     const [query, setQeury] = useState('');
     const filteredManufacturer =
         query === ""
@@ -20,7 +20,7 @@ const SearchManufacture = ({ manufacture, setManufacture }: SearchManufacturePro
     return (
 
         <div className='search-manufacturer'>
-            <Combobox value={manufacture}  onChange={setManufacture}>
+            <Combobox value={selected}  onChange={setSelected}>
                 <div className='relative w-full'>
                     <Combobox.Button className='absolute top-[14px]'>
                         <Image
@@ -35,8 +35,8 @@ const SearchManufacture = ({ manufacture, setManufacture }: SearchManufacturePro
                     {/* Input field for searching */}
                     <Combobox.Input
                         className='search-manufacturer__input'
-                        placeholder="Volkswagan"
-                        displayValue={(manufacture) => manufacture}
+                        placeholder="Volkswagan..."
+                        displayValue={(item:string) => item}
                         onChange={(e) => setQeury(e.target.value)}
                     />
 
@@ -46,7 +46,7 @@ const SearchManufacture = ({ manufacture, setManufacture }: SearchManufacturePro
                         leave="transition ease-in duration-100"
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
-                        afterLeave={() => setQeury('')}
+                        afterLeave={() => setQeury("")}
                     >
 
                         <Combobox.Options>

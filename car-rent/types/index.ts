@@ -17,7 +17,10 @@ export interface SearchManufactureProps {
     manufacture: string;
     setManufacture: (manufacture: string) => void
 }
-
+export interface SearchBarProps {
+  setManuFacturer: (manufacturer: string) => void;
+  setModel: (model: string) => void;
+}
 export interface CarProps {
     city_mpg: number;
     class: string;
@@ -41,6 +44,8 @@ export interface FilterProps{
     model: string;
 }
 
+
+
 export interface HomeProps {
   searchParams: FilterProps;
 }
@@ -49,13 +54,20 @@ export interface OptionProps{
     value: string;
         
 }
-export interface CustomFilterProps{
+export interface CustomFilterProps<T>{
     title: string;
-   options: OptionProps[];
+    options: OptionProps[];
+     setFilter: (selected: T) => void;
 }
 
 export interface ShowMoreProps{
     pageNumber: number;
     isNext: boolean;
+    setLimit: (limit: number) => void;
+}
+
+export interface SearchManufactureProps {
+  selected: string;
+  setSelected: (selected: string) => void;
 }
 
